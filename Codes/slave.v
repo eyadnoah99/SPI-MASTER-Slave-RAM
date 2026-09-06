@@ -29,11 +29,11 @@ reg send_data_flag;  //will be 1 when slave send data to master
 
 always @(posedge sclk or negedge rstn) begin
 	if(~rstn) begin
-		cs = idle;
+		cs <= idle;
 	end
 
 	else begin
-		cs = ns;
+		cs <= ns;
 	end
 end
 
